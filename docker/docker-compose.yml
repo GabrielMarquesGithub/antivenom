@@ -1,0 +1,18 @@
+# Não é necessario mais o 'version'
+
+services:
+  database:
+    container_name: ${APP_NAME}-container-database
+    build:
+      context: ../sql
+      dockerfile: ../sql/Dockerfile
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - ${DB_PORT}:3306
+    # Passando variáveis de ambiente para o container
+    env_file:
+      - ../configs/.env
