@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <PackageReference Include="MySqlConnector" Version="2.3.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src/Models/" />
+    <Folder Include="src/Services/" />
   </ItemGroup>
 
 </Project>

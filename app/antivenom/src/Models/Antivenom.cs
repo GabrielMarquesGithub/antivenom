@@ -1,4 +1,5 @@
 ﻿namespace antivenom.models;
+
 internal class Antivenom
 {
     private readonly string _type;
